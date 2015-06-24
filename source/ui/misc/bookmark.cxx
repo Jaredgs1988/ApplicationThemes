@@ -138,8 +138,10 @@ SwInsertBookmarkDlg::SwInsertBookmarkDlg( vcl::Window *pParent, SwWrtShell &rS, 
     {
         if(IDocumentMarkAccess::MarkType::BOOKMARK == IDocumentMarkAccess::GetType(**ppBookmark))
         {
+	    OUString sName = ppBookmark->get()->GetName();
+	    sName += " Jared";
             m_pBookmarkBox->InsertSwEntry(
-                    SwBoxEntry(ppBookmark->get()->GetName(), nId++));
+                    SwBoxEntry(sName, nId++));
         }
     }
 
