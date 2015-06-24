@@ -1,0 +1,211 @@
+[CustomBuildSystem]
+CurrentConfiguration=BuildConfig0
+
+[CustomBuildSystem][BuildConfig0]
+BuildDir=file:///home/jared/git/libo/sw
+Title=Module Build -- Release
+
+[CustomBuildSystem][BuildConfig0][ToolBuild]
+Arguments=all
+Enabled=true
+Environment=
+Executable=/usr/bin/make
+Type=0
+
+[CustomBuildSystem][BuildConfig0][ToolClean]
+Arguments=clean
+Enabled=true
+Environment=
+Executable=/usr/bin/make
+Type=3
+
+[CustomBuildSystem][BuildConfig1]
+BuildDir=file:///home/jared/git/libo
+Title=Full Build -- Release
+
+[CustomBuildSystem][BuildConfig1][ToolBuild]
+Arguments=all
+Enabled=true
+Environment=
+Executable=/usr/bin/make
+Type=0
+
+[CustomBuildSystem][BuildConfig1][ToolClean]
+Arguments=clean
+Enabled=true
+Environment=
+Executable=/usr/bin/make
+Type=3
+
+[CustomBuildSystem][BuildConfig2]
+BuildDir=file:///home/jared/git/libo/sw
+Title=Module Build -- Debug
+
+[CustomBuildSystem][BuildConfig2][ToolBuild]
+Arguments=all debug=T
+Enabled=true
+Environment=
+Executable=/usr/bin/make
+Type=0
+
+[CustomBuildSystem][BuildConfig2][ToolClean]
+Arguments=clean debug=T
+Enabled=true
+Environment=
+Executable=/usr/bin/make
+Type=3
+
+[CustomBuildSystem][BuildConfig3]
+BuildDir=file:///home/jared/git/libo
+Title=Full Build -- Debug
+
+[CustomBuildSystem][BuildConfig3][ToolBuild]
+Arguments=all debug=T
+Enabled=true
+Environment=
+Executable=/usr/bin/make
+Type=0
+
+[CustomBuildSystem][BuildConfig3][ToolClean]
+Arguments=clean debug=T
+Enabled=true
+Environment=
+Executable=/usr/bin/make
+Type=3
+
+[Defines And Includes][Compiler]
+Name=GCC
+Path=gcc
+Type=GCC
+
+[Launch]
+Launch Configurations=Launch Configuration 0,Launch Configuration 1,Launch Configuration 2,Launch Configuration 3,Launch Configuration 4,Launch Configuration 5,Launch Configuration 6
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=Local tests -- quick tests (unitcheck)
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Arguments=unitcheck
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=default
+Executable=file:///usr/bin/make
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=
+Use External Terminal=false
+Working Directory=file:///home/jared/git/libo/sw
+isExecutable=true
+
+[Launch][Launch Configuration 1]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=Local tests -- slow tests (unitcheck, slowcheck)
+Type=Native Application
+
+[Launch][Launch Configuration 1][Data]
+Arguments=unitcheck slowcheck
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=default
+Executable=file:///usr/bin/make
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=
+Use External Terminal=false
+Working Directory=file:///home/jared/git/libo/sw
+isExecutable=true
+
+[Launch][Launch Configuration 2]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=Local tests -- integration tests (unitcheck, slowcheck, subsequentcheck)
+Type=Native Application
+
+[Launch][Launch Configuration 2][Data]
+Arguments=unitcheck slowcheck subsequentcheck
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=default
+Executable=file:///usr/bin/make
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=
+Use External Terminal=false
+Working Directory=file:///home/jared/git/libo/sw
+isExecutable=true
+
+[Launch][Launch Configuration 3]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=Global tests -- quick tests (unitcheck)
+Type=Native Application
+
+[Launch][Launch Configuration 3][Data]
+Arguments=unitcheck
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=default
+Executable=file:///usr/bin/make
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=
+Use External Terminal=false
+Working Directory=file:///home/jared/git/libo
+isExecutable=true
+
+[Launch][Launch Configuration 4]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=Global tests -- slow tests (unitcheck, slowcheck)
+Type=Native Application
+
+[Launch][Launch Configuration 4][Data]
+Arguments=unitcheck slowcheck
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=default
+Executable=file:///usr/bin/make
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=
+Use External Terminal=false
+Working Directory=file:///home/jared/git/libo
+isExecutable=true
+
+[Launch][Launch Configuration 5]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=Global tests -- integration tests (unitcheck, slowcheck, subsequentcheck)
+Type=Native Application
+
+[Launch][Launch Configuration 5][Data]
+Arguments=unitcheck slowcheck subsequentcheck
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=default
+Executable=file:///usr/bin/make
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=
+Use External Terminal=false
+Working Directory=file:///home/jared/git/libo
+isExecutable=true
+
+[Launch][Launch Configuration 6]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=Run LibreOffice
+Type=Native Application
+
+[Launch][Launch Configuration 6][Data]
+Arguments=
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=default
+Executable=file:///home/jared/git/libo/instdir/program/soffice.bin
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=
+Use External Terminal=false
+Working Directory=file:///home/jared/git/libo/instdir
+isExecutable=true
+
+[Project]
+VersionControlSupport=kdevgit
